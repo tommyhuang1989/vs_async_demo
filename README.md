@@ -1,2 +1,2 @@
-# vs_sync_demo
+# vs_async_demo
 learning asynchronous code designing
