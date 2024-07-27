@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="test" Margin="100"/>
+        <StackPanel>
+            <StackPanel>
+                <TextBlock Text="同步方法测试：" FontSize="24" HorizontalAlignment="Left" Margin="50,0,0,10"/>
+                <Button x:Name="btn_sync" Content="Prepare backfast sync" Width="150" Height="50" Click="btn_sync_Click"/>
+
+                <TextBlock Text="异步方法测试：" FontSize="24" HorizontalAlignment="Left" Margin="50,20,0,10"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Button x:Name="btn_async1" Content="Prepare backfast async 1" Margin="0,0,0,0" Width="150" Height="50" Click="btn_async1_Click"/>
+                    <Button x:Name="btn_async2" Content="Prepare backfast async 2" Margin="20,0,0,0" Width="150" Height="50" Click="btn_async2_Click"/>
+                    <Button x:Name="btn_async3" Content="Prepare backfast async 3" Margin="20,0,0,0" Width="150" Height="50" Click="btn_async3_Click"/>
+                </StackPanel>
+
+                <TextBlock Text="异步方法测试，使用 WhenAll() 和 WhenAny()：" FontSize="24" HorizontalAlignment="Left" Margin="50,20,0,10"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Button x:Name="btn_async_when_all" Content="Prepare backfast async With WhenAll" Margin="0,0,0,0" Width="230" Height="50" Click="btn_async_when_all_Click"/>
+                    <Button x:Name="btn_async_when_any" Content="Prepare backfast async With WhenAny" Margin="20,0,0,0" Width="230" Height="50" Click="btn_async_when_any_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
